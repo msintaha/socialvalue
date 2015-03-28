@@ -1,0 +1,15 @@
+<template name="home">
+          {{#if currentUser}}
+            {{>social}}
+            {{else}}
+     {{>landing}}
+            {{/if}}
+            
+</template>
+<template name="landing">
+
+            <div class="large ui facebook login button" id="login">
+                <i class="facebook icon"></i> Login with Facebook
+            </div>
+    
+</template>

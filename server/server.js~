@@ -1,0 +1,20 @@
+Meteor.methods({
+		'removePosts':function(){
+			Posts.remove({});
+		},
+         'removeEngaged': function(){
+            Engaged.remove({});
+        },
+    
+	 'removeData':function(){
+	Data.remove({});
+	},
+            'removeAllpostImp':function(){
+			Postimp.remove({});
+		},
+            'removeAllpostEng':function(){
+			Posteng.remove({});
+		}
+		
+
+	});

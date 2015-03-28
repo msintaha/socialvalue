@@ -1,0 +1,70 @@
+<template name="social">
+<div class="ui menu">
+  <div class="item">
+    
+     <div class=" author">
+    Logged in as <strong>{{user}}</strong>
+    </div>
+
+  </div>
+  <div class="right item">
+    <div class="ui facebook button" id="logout">
+  <i class="facebook icon"></i>
+  Logout
+  </div>
+  </div>
+</div>
+<main style="width:70%;margin-left:auto;margin-right:auto;">
+<div class="ui attached message">
+  <div class="header">
+    Enter your facebook page name like so:
+  </div>
+ <p><span style="color:#3b83c0;">https://www.facebook.com/pages/Amader-Bangladesh?ref=aymt_homepage_panel</span> where 'Amader-Bangladesh' is the page name</p>
+</div>
+<form class="ui form segment">
+  
+    <div class="field">
+      <label>Page Name</label>
+      <input placeholder="Page Name" name="pagename" class="pagename" type="text">
+    </div>
+   
+    <div class="ui blue submit button" id="btn-user-data">Submit</div>
+  </form>
+<ul><br>
+<div class="ui statistics">
+  <div class="red statistic">
+    <div class="value">
+      {{fanvalue}}
+    </div>
+    <div class="label">
+      Value of a fan (Overall)
+    </div>
+  </div><br></div>
+
+  <div class="ui statistics">
+    <div class="red statistic">
+    <div class="value">
+       {{postvalue}} 
+    </div>
+    <div class="label">
+      Value of a post
+    </div>
+  </div><br></div>
+
+  <div class="ui statistics">
+    <div class="red statistic">
+    <div class="value">
+       {{pagevalue}} 
+    </div>
+    <div class="label">
+      Value of your page
+    </div>
+  </div>
+  </div>
+<br>
+
+<br><div class="ui inverted red button" id="del">Delete everything</div>
+
+  </ul>
+  </main>
+</template>

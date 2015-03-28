@@ -1,0 +1,58 @@
+<template name="admin">
+<div class="ui menu">
+  <div class="item">
+    <div class="ui button">{{>loginButtons}}</div>
+  </div>
+</div>  
+    {{#if isAdmin}}
+   {{#each data}}
+		<li>{{>database}}</li>
+	{{/each}}
+ {{else}}
+  {{>jokesonyou}}
+  {{/if}}
+<style type="text/css">
+	    body{
+    background: white;
+  }
+</style>
+
+</template>
+
+<template name="database">
+	<table class="ui table">
+  <thead>
+    <tr>
+      <th id="one"><a class="remove"><i class="remove icon"></i></a>Name</th>
+      <th id="two">FB Link</th>
+      <th id="three">Date</th>
+      <th id="four">Wish</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+    <tr>
+      <td id="one">{{theName}}</td>
+      <td id="two">{{theProfile}}</td>
+      <td id="three">{{theDate}}</td>
+      <td id="four">{{theWish}}</td>
+    </tr>
+ 
+  </tbody>
+</table>
+</template>
+
+<template name="jokesonyou">
+
+
+<div class="ui card" style="margin-left:auto;margin-right:auto;">
+  <a class="image" href="#">
+    <img src="/img/Access.jpg">
+  </a>
+  <div class="content">
+    <a class="header" style="text-align:center;" href="#">Go Home.<br>There's nothing to see here!</a>
+  
+  </div>
+</div>
+
+</template>
