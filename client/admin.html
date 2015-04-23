@@ -5,9 +5,9 @@
   </div>
 </div>  
     {{#if isAdmin}}
-   {{#each data}}
+
 		<li>{{>database}}</li>
-	{{/each}}
+
  {{else}}
   {{>jokesonyou}}
   {{/if}}
@@ -23,19 +23,19 @@
 	<table class="ui table">
   <thead>
     <tr>
-      <th id="one"><a class="remove"><i class="remove icon"></i></a>Name</th>
-      <th id="two">FB Link</th>
-      <th id="three">Date</th>
-      <th id="four">Wish</th>
+      <th id="one">Page Name</th>
+      <th id="two">Fan Value</th>
+      <th id="three">Post Value</th>
+      <th id="four">Page Value</th>
     </tr>
   </thead>
   <tbody>
    
     <tr>
-      <td id="one">{{theName}}</td>
-      <td id="two">{{theProfile}}</td>
-      <td id="three">{{theDate}}</td>
-      <td id="four">{{theWish}}</td>
+      <td id="one">{{pagename}}</td>
+      <td id="two">{{Fanvalue}}</td>
+      <td id="three">{{Postvalue}}</td>
+      <td id="four">{{Pagevalue}}</td>
     </tr>
  
   </tbody>

@@ -28,7 +28,7 @@ Meteor.methods({
 			Pagevalue.remove({});
 		},
 		         'removeAllfanVal':function(){
-			PFanvalue.remove({});
+			Fanvalue.remove({});
 		}
 		
 

@@ -1,20 +1,24 @@
- Meteor.subscribe("data");
-Template.social.helpers({
+
+Template.admin.helpers({
 	stuff:function(){
 		return Engaged.find({});
 	},
     isAdmin:function(){
     var user=Meteor.userId();
-    author="zhNgBEvqjjoicN2eC";
+    author="chBA4Z2DP2ueM2Mfs";
     if(user===author){
       return true;
     }
     else{
       return false;
     }
+  },
+    pagename:function(){
+    return Pagename.find().fetch().name;
   }
 });
 Template.social.helpers({
+
   user:function(){
     var name = Meteor.user().profile.name;
     return name;
@@ -30,7 +34,7 @@ Template.social.helpers({
    var valueFan=(avg)*weight;
    Fanvalue.insert(valueFan);
    Session.set('valuefan',valueFan);
-   return valueFan;
+   return parseInt(valueFan);
   },
   //Posts.find().fetch()[Posts.find().count()-1].data.length -----gives you the no. of posts in that year
   //Posts.find().fetch()[0].data[0].id
@@ -59,7 +63,7 @@ Template.social.helpers({
     var valuePost=(engsumAvg*weight)+(impsumAvg*weight);
     Postvalue.insert(valuePost);
     Session.set('valuepost',valuePost);
-     return valuePost;
+     return parseInt(valuePost);
   },
   pagevalue:function(){
     //Pagename.find().fetch()[Pagename.find().count()-1].category
@@ -72,7 +76,7 @@ Template.social.helpers({
     var weight=0.05;
     var pageValue=(fv*totalFans)+(pv*postNos)+(impressionsPost*weight);
     Pagevalue.insert(pageValue);
-    return pageValue;
+    return parseInt(pageValue);
   }
 
 });
